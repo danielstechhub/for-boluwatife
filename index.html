@@ -3,54 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Boluwatife 💗</title>
+<title>For Boluwatife 🌙✨</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
-<!-- Confetti library for high-quality heart explosion -->
+<!-- Confetti library for celebration -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <style>
   :root{
-    --cream:#FFF5F7;
-    --pink:#FFC0D3;
-    --hotpink:#FF5E8E;
-    --plum:#4A2B43;
-    --peach:#FFE5B4;
-    --mint:#D4F0F0;
-    --shadow: rgba(255, 94, 142, 0.18);
+    --bg:#0F0A15; /* Midnight Deep Violet */
+    --card-bg:#1A1222; /* Rich Dark Card */
+    --card-border:#3B2342;
+    --text:#F3E9F4; /* Soft White-Lavender Text */
+    --text-soft:#B49BB3; /* Soft Muted Lavender */
+    --crimson:#E63956; /* Cute Dark Red / Crimson Highlight */
+    --crimson-soft:#4D1826;
+    --gold:#FFD166; /* Star Glow Gold */
+    --shadow: rgba(0, 0, 0, 0.4);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
     font-family:'Quicksand', sans-serif;
-    background: linear-gradient(180deg, var(--cream), #FFEBF0 40%, var(--cream));
-    color:var(--plum);
+    background: linear-gradient(180deg, var(--bg), #160D1E 40%, var(--bg));
+    color:var(--text);
     overflow-x:hidden;
   }
   h1,h2,h3,.display{
     font-family:'Fredoka', cursive;
   }
 
-  /* Floating hearts background */
-  .hearts-bg{
+  /* Floating stars & dark hearts background */
+  .stars-bg{
     position:fixed;
     inset:0;
     pointer-events:none;
     overflow:hidden;
     z-index:0;
   }
-  .heart{
+  .star{
     position:absolute;
     bottom:-10%;
-    font-size: 22px;
-    opacity:0.55;
+    font-size: 20px;
+    opacity:0.5;
     animation: floatUp linear infinite;
-    color: var(--hotpink);
+    color: var(--crimson);
   }
   @keyframes floatUp{
     0%{ transform: translateY(0) translateX(0) rotate(0deg); opacity:0; }
-    10%{ opacity:0.7; }
+    15%{ opacity:0.6; }
     100%{ transform: translateY(-115vh) translateX(20px) rotate(25deg); opacity:0; }
   }
 
@@ -97,11 +99,12 @@
     letter-spacing: 2px;
     text-transform:uppercase;
     font-size:12px;
-    color: var(--hotpink);
-    background: #FFF;
-    padding: 6px 18px;
+    color: var(--crimson);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 8px 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 12px var(--shadow);
+    box-shadow: 0 4px 15px var(--shadow);
     margin-bottom: 20px;
   }
   .hero h1{
@@ -109,7 +112,7 @@
     font-weight:700;
     margin:0;
     line-height:1.2;
-    color: var(--plum);
+    color: var(--text);
   }
   .hero h1 .word{
     display:inline-block;
@@ -120,7 +123,7 @@
   @keyframes wordIn{ to{ opacity:1; transform:translateY(0); } }
   .hero h1 em{
     font-style:normal;
-    color: var(--hotpink);
+    color: var(--crimson);
     display:inline-block;
     animation: pop 2.4s ease-in-out infinite;
   }
@@ -133,7 +136,7 @@
     max-width: 520px;
     margin: 22px auto 0;
     font-weight:600;
-    color:#7A4C6F;
+    color:var(--text-soft);
     opacity:0;
     animation: fadeIn 0.9s ease forwards;
     animation-delay: .8s;
@@ -143,7 +146,7 @@
     margin-top: 48px;
     font-size:14px;
     font-weight:700;
-    color: var(--hotpink);
+    color: var(--gold);
     animation: bounce 1.6s ease-in-out infinite;
   }
   @keyframes bounce{
@@ -154,7 +157,7 @@
   /* STORY / TIMELINE */
   .story h2{
     font-size: clamp(1.8rem, 4vw, 2.4rem);
-    color: var(--hotpink);
+    color: var(--crimson);
     margin-top: 10px;
   }
   .timeline{
@@ -165,24 +168,24 @@
     text-align:left;
   }
   .tl-item{
-    background:#fff;
+    background:var(--card-bg);
     border-radius: 24px;
     padding: 24px 28px;
     box-shadow: 0 14px 30px var(--shadow);
-    border: 2px dashed var(--pink);
+    border: 1px solid var(--card-border);
     transition: transform 0.25s ease;
     display:grid;
     grid-template-columns: 100px 1fr;
     gap: 18px;
   }
-  .tl-item:hover{ transform: translateY(-4px) scale(1.01); }
+  .tl-item:hover{ transform: translateY(-4px) scale(1.01); border-color: var(--crimson); }
   .tl-tag{
     font-size: 11px;
     font-weight:800;
     letter-spacing: 1px;
     text-transform:uppercase;
     color: #FFF;
-    background: var(--hotpink);
+    background: var(--crimson);
     padding: 6px 12px;
     border-radius: 14px;
     text-align:center;
@@ -190,50 +193,51 @@
   }
   .tl-body h3{
     font-size: 1.2rem;
-    color: var(--plum);
+    color: var(--text);
     margin: 0 0 6px;
   }
   .tl-body p{
     font-size: 0.98rem;
     line-height:1.65;
-    color: #7A4C6F;
+    color: var(--text-soft);
     margin:0;
     font-weight:600;
   }
 
   /* MESSAGE */
   .card{
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 30px;
     padding: 44px 36px;
     box-shadow: 0 20px 45px var(--shadow);
-    border: 3px dashed var(--pink);
+    border: 2px dashed var(--card-border);
     transition: transform 0.35s ease;
   }
   .card:hover{
     transform: translateY(-4px);
+    border-color: var(--crimson);
   }
   .message h2{
     font-size: clamp(1.8rem, 4vw, 2.4rem);
-    color: var(--hotpink);
+    color: var(--crimson);
     margin-top:0;
   }
   .message p{
     font-size: 1.1rem;
     line-height:1.8;
     font-weight:600;
-    color:#5A3350;
+    color:var(--text);
   }
   .signoff{
     margin-top: 24px;
     font-family:'Sacramento', cursive;
-    font-size:2.2rem;
+    font-size:2.3rem;
     font-weight: bold;
-    color:var(--hotpink);
+    color:var(--crimson);
   }
 
   /* COUNTDOWN */
-  .countdown h2{ font-size: clamp(1.8rem, 4.5vw, 2.4rem); color: var(--hotpink); margin-bottom: 10px; }
+  .countdown h2{ font-size: clamp(1.8rem, 4.5vw, 2.4rem); color: var(--crimson); margin-bottom: 10px; }
   .clock{
     display:flex;
     justify-content:center;
@@ -242,8 +246,8 @@
     margin-top: 30px;
   }
   .clock .unit{
-    background:#fff;
-    border: 2px solid var(--pink);
+    background:var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 20px;
     padding: 20px 18px;
     min-width: 90px;
@@ -259,7 +263,7 @@
   .clock .num{
     font-family:'Fredoka', cursive;
     font-size: 2.4rem;
-    color: var(--hotpink);
+    color: var(--crimson);
     display:block;
     line-height:1;
   }
@@ -267,7 +271,7 @@
     font-size: 11px;
     letter-spacing: 1.2px;
     text-transform:uppercase;
-    color: #A3728F;
+    color: var(--text-soft);
     font-weight:800;
     margin-top: 8px;
     display:block;
@@ -275,15 +279,15 @@
   .countdown .meet-note{
     margin-top: 26px;
     font-size: 1.05rem;
-    color:#8A4A76;
+    color:var(--text-soft);
     font-weight:700;
   }
 
   /* GALLERY */
-  .gallery h2{ margin-bottom: 8px; color: var(--hotpink); font-size: clamp(1.8rem, 4vw, 2.4rem); }
+  .gallery h2{ margin-bottom: 8px; color: var(--crimson); font-size: clamp(1.8rem, 4vw, 2.4rem); }
   .gallery .hint{
     font-size:14px;
-    color:#A3728F;
+    color:var(--text-soft);
     margin-bottom: 32px;
     font-weight:700;
   }
@@ -293,9 +297,10 @@
     gap: 20px;
   }
   .polaroid{
-    background:#fff;
+    background:var(--card-bg);
     padding: 12px 12px 22px;
     border-radius: 16px;
+    border: 1px solid var(--card-border);
     box-shadow: 0 12px 26px var(--shadow);
     transform: rotate(var(--r,-3deg));
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -303,7 +308,7 @@
   }
   .polaroid:nth-child(2n){ --r: 3deg; }
   .polaroid:nth-child(3n){ --r: -4deg; }
-  .polaroid:hover{ transform: rotate(0deg) scale(1.08); z-index: 5; }
+  .polaroid:hover{ transform: rotate(0deg) scale(1.08); z-index: 5; border-color: var(--crimson); }
   .polaroid .frame{
     width:100%;
     aspect-ratio: 1;
@@ -327,14 +332,14 @@
     margin-top:12px;
     font-family:'Fredoka', cursive;
     font-size: 14px;
-    color: var(--plum);
+    color: var(--text);
   }
-  .f1{ background: linear-gradient(135deg, var(--pink), #FFE1EE); }
-  .f2{ background: linear-gradient(135deg, var(--peach), #FFF2D9); }
-  .f3{ background: linear-gradient(135deg, var(--mint), #E6FBF1); }
-  .f4{ background: linear-gradient(135deg, #D9C9FF, #F0E9FF); }
-  .f5{ background: linear-gradient(135deg, var(--hotpink), #FFD6E6); }
-  .f6{ background: linear-gradient(135deg, #FFE6B3, var(--peach)); }
+  .f1{ background: linear-gradient(135deg, #2A1733, #431E4A); }
+  .f2{ background: linear-gradient(135deg, #381A22, #571C2B); }
+  .f3{ background: linear-gradient(135deg, #182830, #1F3B4A); }
+  .f4{ background: linear-gradient(135deg, #2D1F3D, #482E63); }
+  .f5{ background: linear-gradient(135deg, #4A1521, #6E1A2D); }
+  .f6{ background: linear-gradient(135deg, #2D2A1F, #4A432E); }
 
   /* INTERACTIVE BUTTON */
   .ask{
@@ -343,7 +348,7 @@
     align-items:center;
     gap: 24px;
   }
-  .ask h2{ font-size: clamp(2rem, 5vw, 2.8rem); color: var(--hotpink); }
+  .ask h2{ font-size: clamp(2rem, 5vw, 2.8rem); color: var(--crimson); }
   .btn-row{
     position:relative;
     display:flex;
@@ -363,21 +368,21 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   #yesBtn{
-    background: var(--hotpink);
+    background: var(--crimson);
     color:#fff;
-    box-shadow: 0 10px 25px rgba(255,94,142,0.4);
+    box-shadow: 0 10px 25px rgba(230, 57, 86, 0.4);
   }
   #yesBtn:hover{ transform: scale(1.1); }
   #noBtn{
-    background: #fff;
-    color: var(--plum);
-    border: 2px solid var(--pink);
+    background: var(--card-bg);
+    color: var(--text-soft);
+    border: 1px solid var(--card-border);
     position:relative;
     transition: all 0.2s ease;
   }
   .result{
     font-size: 1.5rem;
-    color: var(--hotpink);
+    color: var(--gold);
     min-height: 40px;
     font-family:'Fredoka', cursive;
   }
@@ -386,7 +391,7 @@
     text-align:center;
     padding: 40px 24px 60px;
     font-size: 14px;
-    color:#B98AA7;
+    color:var(--text-soft);
     font-weight:700;
   }
 
@@ -404,21 +409,21 @@
 </head>
 <body>
 
-<div class="hearts-bg" id="heartsBg"></div>
+<div class="stars-bg" id="starsBg"></div>
 
 <section class="hero">
   <div class="eyebrow">✨ for Adeniran Boluwatife ✨</div>
   <h1>
     <span class="word" style="animation-delay:.05s">From</span> <span class="word" style="animation-delay:.12s">a</span> <span class="word" style="animation-delay:.19s">TikTok</span> <span class="word" style="animation-delay:.26s">friend</span><br>
-    <span class="word" style="animation-delay:.36s">to</span> <span class="word" style="animation-delay:.43s">my</span> <span class="word" style="animation-delay:.5s"><em>favorite</em></span> <span class="word" style="animation-delay:.58s"><em>person</em> 💗</span>
+    <span class="word" style="animation-delay:.36s">to</span> <span class="word" style="animation-delay:.43s">my</span> <span class="word" style="animation-delay:.5s"><em>favorite</em></span> <span class="word" style="animation-delay:.58s"><em>person</em> 🌙</span>
   </h1>
-  <p class="sub">Neither of us planned this. An app built for short videos somehow gave me the sweetest person ever — you!</p>
-  <div class="scroll-hint">scroll down, it gets cuter ↓</div>
+  <p class="sub">Neither of us planned this. An app built for short videos somehow gave me the coolest person ever — you!</p>
+  <div class="scroll-hint">scroll down, it gets better ↓</div>
 </section>
 
 <section class="story reveal">
   <div class="eyebrow">how it started</div>
-  <h2>Not the plan, but the best thing that happened anyway 🌸</h2>
+  <h2>Not the plan, but the best thing that happened anyway 🖤</h2>
   <div class="timeline stagger">
     <div class="tl-item stagger-item">
       <div class="tl-tag">The Start</div>
@@ -430,7 +435,7 @@
     <div class="tl-item stagger-item">
       <div class="tl-tag">Since Then</div>
       <div class="tl-body">
-        <h3>You became my favorite notification 💕</h3>
+        <h3>You became my favorite notification 💬</h3>
         <p>Messages turned into long conversations, and suddenly you became the exact person I want to tell everything to first.</p>
       </div>
     </div>
@@ -446,20 +451,20 @@
 
 <section class="message reveal">
   <div class="card">
-    <h2>Hi Tife 👋💕</h2>
+    <h2>Hi Tife 👋🖤</h2>
     <p>
       I don't know exactly when it happened, but somewhere between your smile, the way you listen to me, give me attention, keep me checked, and especially how sensible you are — you became my favorite person to think about.
     </p>
     <p>
-      This isn't a big grand gesture, just a cute little website to say what I feel: I really, really like you, and I wanted you to know it in a way you'd remember and smile about. 🌸 <em>(Note: Yes, I typed all these words myself!)</em>
+      This isn't a big grand gesture, just a cool little website to say what I feel: I really, really like you, and I wanted you to know it in a way you'd remember and smile about. 🌙 <em>(Note: Yes, I typed all these words myself!)</em>
     </p>
-    <p style="font-size: 1.2rem; color: var(--hotpink); font-weight: 700;">
+    <p style="font-size: 1.2rem; color: var(--crimson); font-weight: 700;">
       So here it is: <strong>I love you, Boluwatife.</strong> I really want us to be together and explore the world side by side.
     </p>
-    <div class="signoff" style="font-size: 1.3rem; font-family: 'Quicksand', sans-serif; color: #7A4C6F; margin-top: 20px;">
-      Know that this is not me putting pressure on you — take all the time you need to think about it! 💗
+    <div class="signoff" style="font-size: 1.2rem; font-family: 'Quicksand', sans-serif; color: var(--text-soft); margin-top: 20px;">
+      Know that this is not me putting pressure on you — take all the time you need to think about it! 🥀
     </div>
-    <div class="signoff">made with love, just for you 🧸</div>
+    <div class="signoff">made with love, just for you 🖤</div>
   </div>
 </section>
 
@@ -472,48 +477,48 @@
     <div class="unit"><span class="num" id="mins">--</span><span class="label">Minutes</span></div>
     <div class="unit"><span class="num" id="secs">--</span><span class="label">Seconds</span></div>
   </div>
-  <p class="meet-note">Every second on that clock is one less step between typing to you and actually being next to you. 💗</p>
+  <p class="meet-note">Every second on that clock is one less step between typing to you and actually being next to you. 🖤</p>
 </section>
 
 <section class="gallery">
   <h2 class="reveal">A Little Gallery 🖼️</h2>
-  <div class="hint reveal">(our cute memories &amp; photos go here!)</div>
+  <div class="hint reveal">(our cool memories &amp; photos go here!)</div>
   <div class="gallery-grid stagger">
     <div class="polaroid stagger-item"><div class="frame f1"><img src="images/ourfirstchat.jpg" alt="First message" onerror="this.parentNode.innerHTML='💬'"></div><span class="cap">first message 💬</span></div>
     <div class="polaroid stagger-item"><div class="frame f2"><img src="images/yourcutesleep.jpg" alt="Late night calls" onerror="this.parentNode.innerHTML='🌙'"></div><span class="cap">late night calls 🌙</span></div>
     <div class="polaroid stagger-item"><div class="frame f3"><img src="images/yourcutesmile.jpg" alt="Your laugh" onerror="this.parentNode.innerHTML='🤭'"></div><span class="cap">your laugh 🤭</span></div>
-    <div class="polaroid stagger-item"><div class="frame f4">🎶</div><span class="cap">counting down ⏱️</span></div>
+    <div class="polaroid stagger-item"><div class="frame f4">🎧</div><span class="cap">counting down ⏱️</span></div>
     <div class="polaroid stagger-item"><div class="frame f5">💌</div><span class="cap">Aug 14th 🗓️</span></div>
     <div class="polaroid stagger-item"><div class="frame f6">✨</div><span class="cap">us, in person ✨</span></div>
   </div>
 </section>
 
 <section class="ask reveal">
-  <h2>So... will you be mine? 🥺❤️</h2>
+  <h2>So... will you be mine? 🥺🖤</h2>
   <div class="btn-row" id="btnRow">
-    <button id="yesBtn" onclick="sayYes()">Yes 💗</button>
+    <button id="yesBtn" onclick="sayYes()">Yes 🖤</button>
     <button id="noBtn" onmouseover="dodge()" onclick="dodge()">No 😜</button>
   </div>
   <div class="result" id="result"></div>
 </section>
 
 <footer>
-  made just for Boluwatife, with a whole lot of love 🌸💗
+  made just for Boluwatife, with a whole lot of love 🌙🖤
 </footer>
 
 <script>
-  // Floating hearts background
-  const heartsBg = document.getElementById('heartsBg');
-  const heartEmojis = ['💗','💕','💓','🌸','✨'];
+  // Floating stars & dark emojis background
+  const starsBg = document.getElementById('starsBg');
+  const starEmojis = ['✨','🌙','🖤','⭐','💫'];
   for(let i=0;i<22;i++){
-    const h = document.createElement('div');
-    h.className = 'heart';
-    h.textContent = heartEmojis[Math.floor(Math.random()*heartEmojis.length)];
-    h.style.left = Math.random()*100 + '%';
-    h.style.animationDuration = (8 + Math.random()*10) + 's';
-    h.style.animationDelay = (Math.random()*10) + 's';
-    h.style.fontSize = (16 + Math.random()*20) + 'px';
-    heartsBg.appendChild(h);
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.textContent = starEmojis[Math.floor(Math.random()*starEmojis.length)];
+    s.style.left = Math.random()*100 + '%';
+    s.style.animationDuration = (8 + Math.random()*10) + 's';
+    s.style.animationDelay = (Math.random()*10) + 's';
+    s.style.fontSize = (16 + Math.random()*20) + 'px';
+    starsBg.appendChild(s);
   }
 
   // Countdown to August 14, 2026
@@ -559,12 +564,12 @@
 
   // CELEBRATE YES
   function sayYes(){
-    document.getElementById('result').textContent = "Yay!! 🎉💗 Best decision you've made all week!";
+    document.getElementById('result').textContent = "Yay!! 🎉🖤 Best decision you've made all week!";
     confetti({
       particleCount: 120,
       spread: 80,
       origin: { y: 0.6 },
-      colors: ['#FF5E8E', '#FFC0D3', '#FFE5B4', '#FF8FB1']
+      colors: ['#E63956', '#FFD166', '#4D1826', '#F3E9F4']
     });
   }
 
