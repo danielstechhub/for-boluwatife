@@ -1,449 +1,589 @@
+Here is the updated HTML code. I've transformed the design to use a dark gradient with animated, colorful accents as you requested, while keeping all of your original words and messages exactly as you typed them for your crush.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Boluwatife 🌙✨</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
-<!-- Confetti library for celebration -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<style>
-  :root{
-    --bg:#0F0A15; /* Midnight Deep Violet */
-    --card-bg:#1A1222; /* Rich Dark Card */
-    --card-border:#3B2342;
-    --text:#F3E9F4; /* Soft White-Lavender Text */
-    --text-soft:#B49BB3; /* Soft Muted Lavender */
-    --crimson:#E63956; /* Cute Dark Red / Crimson Highlight */
-    --crimson-soft:#4D1826;
-    --gold:#FFD166; /* Star Glow Gold */
-    --shadow: rgba(0, 0, 0, 0.4);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    font-family:'Quicksand', sans-serif;
-    background: linear-gradient(180deg, var(--bg), #160D1E 40%, var(--bg));
-    color:var(--text);
-    overflow-x:hidden;
-  }
-  h1,h2,h3,.display{
-    font-family:'Fredoka', cursive;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Boluwatife 💜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: radial-gradient(ellipse at 20% 30%, #0d0b1a, #07050f 70%, #020108);
+      min-height: 100vh;
+      color: #e5d9f2;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-  /* Floating stars & dark hearts background */
-  .stars-bg{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:0;
-  }
-  .star{
-    position:absolute;
-    bottom:-10%;
-    font-size: 20px;
-    opacity:0.5;
-    animation: floatUp linear infinite;
-    color: var(--crimson);
-  }
-  @keyframes floatUp{
-    0%{ transform: translateY(0) translateX(0) rotate(0deg); opacity:0; }
-    15%{ opacity:0.6; }
-    100%{ transform: translateY(-115vh) translateX(20px) rotate(25deg); opacity:0; }
-  }
+    /* animated gradient orbs + neon swirl */
+    .glow-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.35;
+      animation: orbFloat 18s ease-in-out infinite alternate;
+    }
+    .orb1 {
+      width: 60vw;
+      height: 60vw;
+      background: #7f3f9e;
+      top: -10%;
+      left: -10%;
+      animation-duration: 22s;
+    }
+    .orb2 {
+      width: 50vw;
+      height: 50vw;
+      background: #3a7bd5;
+      bottom: -10%;
+      right: -10%;
+      animation-duration: 26s;
+      animation-delay: -4s;
+    }
+    .orb3 {
+      width: 40vw;
+      height: 40vw;
+      background: #b23b8e;
+      top: 40%;
+      left: 30%;
+      animation-duration: 20s;
+      animation-delay: -7s;
+      opacity: 0.25;
+    }
+    @keyframes orbFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(6%, 8%) scale(1.1); }
+      66% { transform: translate(-5%, 4%) scale(0.9); }
+      100% { transform: translate(4%, -6%) scale(1.15); }
+    }
 
-  section{
-    position:relative;
-    z-index:1;
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 70px 24px;
-    text-align:center;
-  }
+    /* floating neon particles */
+    .particles-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(200, 140, 255, 0.25);
+      box-shadow: 0 0 18px #b47aff;
+      width: 6px;
+      height: 6px;
+      animation: particleRise linear infinite;
+      opacity: 0.3;
+    }
+    .particle:nth-child(odd) {
+      background: rgba(100, 200, 255, 0.25);
+      box-shadow: 0 0 18px #6bc3ff;
+    }
+    @keyframes particleRise {
+      0% { transform: translateY(100vh) scale(0.2); opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.4; }
+      100% { transform: translateY(-15vh) scale(1.1); opacity: 0; }
+    }
 
-  /* reveal-on-scroll */
-  .reveal{
-    opacity:0;
-    transform: translateY(28px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .reveal.in-view{ opacity:1; transform:translateY(0); }
-  .stagger-item{ opacity:0; }
-  .stagger.in-view .stagger-item{ animation: staggerUp 0.7s ease forwards; }
-  .stagger.in-view .stagger-item:nth-child(1){ animation-delay:.05s; }
-  .stagger.in-view .stagger-item:nth-child(2){ animation-delay:.16s; }
-  .stagger.in-view .stagger-item:nth-child(3){ animation-delay:.27s; }
-  .stagger.in-view .stagger-item:nth-child(4){ animation-delay:.38s; }
-  .stagger.in-view .stagger-item:nth-child(5){ animation-delay:.49s; }
-  .stagger.in-view .stagger-item:nth-child(6){ animation-delay:.60s; }
-  @keyframes staggerUp{
-    from{ opacity:0; transform: translateY(22px) scale(0.96); }
-    to{ opacity:1; transform: translateY(0) scale(1); }
-  }
+    /* glitchy neon lines */
+    .neon-line {
+      position: fixed;
+      height: 1px;
+      width: 80%;
+      background: linear-gradient(90deg, transparent, #a46eff, #ff7ad0, transparent);
+      top: 20%;
+      left: 10%;
+      z-index: 0;
+      filter: blur(2px);
+      animation: neonPulse 6s ease-in-out infinite;
+      opacity: 0.15;
+    }
+    .neon-line2 {
+      top: 70%;
+      width: 60%;
+      left: 20%;
+      background: linear-gradient(90deg, transparent, #7bcfff, #b47aff, transparent);
+      animation-delay: 2s;
+    }
+    @keyframes neonPulse {
+      0%, 100% { opacity: 0.1; transform: scaleX(0.9); }
+      50% { opacity: 0.3; transform: scaleX(1.1); }
+    }
 
-  /* HERO */
-  .hero{
-    min-height: 90vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    padding-top: 40px;
-  }
-  .eyebrow{
-    font-weight:800;
-    letter-spacing: 2px;
-    text-transform:uppercase;
-    font-size:12px;
-    color: var(--crimson);
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 8px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px var(--shadow);
-    margin-bottom: 20px;
-  }
-  .hero h1{
-    font-size: clamp(2.5rem, 7vw, 4.2rem);
-    font-weight:700;
-    margin:0;
-    line-height:1.2;
-    color: var(--text);
-  }
-  .hero h1 .word{
-    display:inline-block;
-    opacity:0;
-    transform: translateY(24px);
-    animation: wordIn 0.7s cubic-bezier(.2,.8,.2,1) forwards;
-  }
-  @keyframes wordIn{ to{ opacity:1; transform:translateY(0); } }
-  .hero h1 em{
-    font-style:normal;
-    color: var(--crimson);
-    display:inline-block;
-    animation: pop 2.4s ease-in-out infinite;
-  }
-  @keyframes pop{
-    0%,100%{ transform: scale(1) rotate(0deg); }
-    50%{ transform: scale(1.08) rotate(-3deg); }
-  }
-  .hero p.sub{
-    font-size: 1.15rem;
-    max-width: 520px;
-    margin: 22px auto 0;
-    font-weight:600;
-    color:var(--text-soft);
-    opacity:0;
-    animation: fadeIn 0.9s ease forwards;
-    animation-delay: .8s;
-  }
-  @keyframes fadeIn{ to{ opacity:1; } }
-  .scroll-hint{
-    margin-top: 48px;
-    font-size:14px;
-    font-weight:700;
-    color: var(--gold);
-    animation: bounce 1.6s ease-in-out infinite;
-  }
-  @keyframes bounce{
-    0%,100%{ transform: translateY(0);}
-    50%{ transform: translateY(8px);}
-  }
+    section {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 24px 50px;
+      text-align: center;
+    }
 
-  /* STORY / TIMELINE */
-  .story h2{
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
-    color: var(--crimson);
-    margin-top: 10px;
-  }
-  .timeline{
-    display:flex;
-    flex-direction:column;
-    gap: 18px;
-    margin-top: 34px;
-    text-align:left;
-  }
-  .tl-item{
-    background:var(--card-bg);
-    border-radius: 24px;
-    padding: 24px 28px;
-    box-shadow: 0 14px 30px var(--shadow);
-    border: 1px solid var(--card-border);
-    transition: transform 0.25s ease;
-    display:grid;
-    grid-template-columns: 100px 1fr;
-    gap: 18px;
-  }
-  .tl-item:hover{ transform: translateY(-4px) scale(1.01); border-color: var(--crimson); }
-  .tl-tag{
-    font-size: 11px;
-    font-weight:800;
-    letter-spacing: 1px;
-    text-transform:uppercase;
-    color: #FFF;
-    background: var(--crimson);
-    padding: 6px 12px;
-    border-radius: 14px;
-    text-align:center;
-    align-self: start;
-  }
-  .tl-body h3{
-    font-size: 1.2rem;
-    color: var(--text);
-    margin: 0 0 6px;
-  }
-  .tl-body p{
-    font-size: 0.98rem;
-    line-height:1.65;
-    color: var(--text-soft);
-    margin:0;
-    font-weight:600;
-  }
+    h1, h2, h3, .display, .signoff, button {
+      font-family: 'Baloo 2', cursive;
+    }
 
-  /* MESSAGE */
-  .card{
-    background: var(--card-bg);
-    border-radius: 30px;
-    padding: 44px 36px;
-    box-shadow: 0 20px 45px var(--shadow);
-    border: 2px dashed var(--card-border);
-    transition: transform 0.35s ease;
-  }
-  .card:hover{
-    transform: translateY(-4px);
-    border-color: var(--crimson);
-  }
-  .message h2{
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
-    color: var(--crimson);
-    margin-top:0;
-  }
-  .message p{
-    font-size: 1.1rem;
-    line-height:1.8;
-    font-weight:600;
-    color:var(--text);
-  }
-  .signoff{
-    margin-top: 24px;
-    font-family:'Sacramento', cursive;
-    font-size:2.3rem;
-    font-weight: bold;
-    color:var(--crimson);
-  }
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stagger-item {
+      opacity: 0;
+    }
+    .stagger.in-view .stagger-item {
+      animation: staggerUp 0.6s ease forwards;
+    }
+    .stagger.in-view .stagger-item:nth-child(1) { animation-delay: 0.04s; }
+    .stagger.in-view .stagger-item:nth-child(2) { animation-delay: 0.14s; }
+    .stagger.in-view .stagger-item:nth-child(3) { animation-delay: 0.24s; }
+    .stagger.in-view .stagger-item:nth-child(4) { animation-delay: 0.34s; }
+    .stagger.in-view .stagger-item:nth-child(5) { animation-delay: 0.44s; }
+    .stagger.in-view .stagger-item:nth-child(6) { animation-delay: 0.54s; }
+    @keyframes staggerUp {
+      from { opacity: 0; transform: translateY(22px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
 
-  /* COUNTDOWN */
-  .countdown h2{ font-size: clamp(1.8rem, 4.5vw, 2.4rem); color: var(--crimson); margin-bottom: 10px; }
-  .clock{
-    display:flex;
-    justify-content:center;
-    gap: 16px;
-    flex-wrap:wrap;
-    margin-top: 30px;
-  }
-  .clock .unit{
-    background:var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 20px;
-    padding: 20px 18px;
-    min-width: 90px;
-    box-shadow: 0 12px 24px var(--shadow);
-    transition: transform 0.3s ease;
-  }
-  .clock .unit.tick{ animation: tickPulse 0.4s ease; }
-  @keyframes tickPulse{
-    0%{ transform: scale(1); }
-    30%{ transform: scale(1.1); }
-    100%{ transform: scale(1); }
-  }
-  .clock .num{
-    font-family:'Fredoka', cursive;
-    font-size: 2.4rem;
-    color: var(--crimson);
-    display:block;
-    line-height:1;
-  }
-  .clock .label{
-    font-size: 11px;
-    letter-spacing: 1.2px;
-    text-transform:uppercase;
-    color: var(--text-soft);
-    font-weight:800;
-    margin-top: 8px;
-    display:block;
-  }
-  .countdown .meet-note{
-    margin-top: 26px;
-    font-size: 1.05rem;
-    color:var(--text-soft);
-    font-weight:700;
-  }
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .eyebrow {
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #b47aff;
+      text-shadow: 0 0 12px #8f5eff;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.05;
+      color: #f0eaff;
+      text-shadow: 0 0 12px #a46eff, 0 0 30px #7f3f9e;
+    }
+    .hero h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: wordIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+    @keyframes wordIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1 em {
+      font-style: normal;
+      display: inline-block;
+      color: #ff9ae6;
+      text-shadow: 0 0 20px #ff7ad0, 0 0 40px #b23b8e;
+      animation: pop 2.8s ease-in-out infinite;
+    }
+    @keyframes pop {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.08) rotate(-2deg); }
+    }
+    .hero .sub {
+      font-size: 1.15rem;
+      max-width: 560px;
+      margin: 24px auto 0;
+      font-weight: 500;
+      color: #cab8e6;
+      text-shadow: 0 0 6px #2f1b4a;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 0.8s;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .scroll-hint {
+      margin-top: 56px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #b47aff;
+      animation: bounce 1.6s ease-in-out infinite;
+      text-shadow: 0 0 18px #7f3f9e;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
 
-  /* GALLERY */
-  .gallery h2{ margin-bottom: 8px; color: var(--crimson); font-size: clamp(1.8rem, 4vw, 2.4rem); }
-  .gallery .hint{
-    font-size:14px;
-    color:var(--text-soft);
-    margin-bottom: 32px;
-    font-weight:700;
-  }
-  .gallery-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
-    gap: 20px;
-  }
-  .polaroid{
-    background:var(--card-bg);
-    padding: 12px 12px 22px;
-    border-radius: 16px;
-    border: 1px solid var(--card-border);
-    box-shadow: 0 12px 26px var(--shadow);
-    transform: rotate(var(--r,-3deg));
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor:pointer;
-  }
-  .polaroid:nth-child(2n){ --r: 3deg; }
-  .polaroid:nth-child(3n){ --r: -4deg; }
-  .polaroid:hover{ transform: rotate(0deg) scale(1.08); z-index: 5; border-color: var(--crimson); }
-  .polaroid .frame{
-    width:100%;
-    aspect-ratio: 1;
-    border-radius: 12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size: 42px;
-    overflow:hidden;
-  }
-  .polaroid .frame img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius: 12px;
-    display:block;
-  }
-  .polaroid .cap{
-    display:block;
-    text-align:center;
-    margin-top:12px;
-    font-family:'Fredoka', cursive;
-    font-size: 14px;
-    color: var(--text);
-  }
-  .f1{ background: linear-gradient(135deg, #2A1733, #431E4A); }
-  .f2{ background: linear-gradient(135deg, #381A22, #571C2B); }
-  .f3{ background: linear-gradient(135deg, #182830, #1F3B4A); }
-  .f4{ background: linear-gradient(135deg, #2D1F3D, #482E63); }
-  .f5{ background: linear-gradient(135deg, #4A1521, #6E1A2D); }
-  .f6{ background: linear-gradient(135deg, #2D2A1F, #4A432E); }
+    /* TIMELINE */
+    .story h2 {
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      margin-top: 10px;
+      color: #ede4ff;
+      text-shadow: 0 0 10px #7f3f9e;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 34px;
+      text-align: left;
+    }
+    .tl-item {
+      background: rgba(20, 12, 30, 0.7);
+      backdrop-filter: blur(4px);
+      border-radius: 24px;
+      padding: 22px 26px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(180, 122, 255, 0.2);
+      border: 1px solid rgba(180, 122, 255, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.3s;
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 18px;
+    }
+    .tl-item:hover {
+      transform: translateY(-4px) rotate(-0.3deg);
+      box-shadow: 0 12px 40px rgba(90, 50, 180, 0.5), 0 0 0 1px #b47aff;
+    }
+    .tl-tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #b47aff;
+      text-shadow: 0 0 12px #7f3f9e;
+      padding-top: 3px;
+    }
+    .tl-body h3 {
+      font-size: 1.1rem;
+      margin: 0 0 6px;
+      color: #f0eaff;
+    }
+    .tl-body p {
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: #cfc1e6;
+      margin: 0;
+      font-weight: 500;
+    }
 
-  /* INTERACTIVE BUTTON */
-  .ask{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap: 24px;
-  }
-  .ask h2{ font-size: clamp(2rem, 5vw, 2.8rem); color: var(--crimson); }
-  .btn-row{
-    position:relative;
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    align-items:center;
-    min-height: 120px;
-    width:100%;
-  }
-  button{
-    font-family:'Fredoka', cursive;
-    font-size: 1.2rem;
-    border:none;
-    border-radius: 999px;
-    padding: 16px 40px;
-    cursor:pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  #yesBtn{
-    background: var(--crimson);
-    color:#fff;
-    box-shadow: 0 10px 25px rgba(230, 57, 86, 0.4);
-  }
-  #yesBtn:hover{ transform: scale(1.1); }
-  #noBtn{
-    background: var(--card-bg);
-    color: var(--text-soft);
-    border: 1px solid var(--card-border);
-    position:relative;
-    transition: all 0.2s ease;
-  }
-  .result{
-    font-size: 1.5rem;
-    color: var(--gold);
-    min-height: 40px;
-    font-family:'Fredoka', cursive;
-  }
+    /* MESSAGE CARD */
+    .card {
+      background: rgba(14, 8, 22, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 32px;
+      padding: 40px 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(180, 122, 255, 0.2);
+      border: 1px solid rgba(180, 122, 255, 0.3);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 60px rgba(60, 30, 130, 0.6), 0 0 0 1px #b47aff;
+    }
+    .message h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-top: 0;
+      color: #f0eaff;
+    }
+    .message p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+      font-weight: 500;
+      color: #d6c8ec;
+    }
+    .signoff {
+      margin-top: 28px;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.4rem;
+      color: #ff9ae6;
+      text-shadow: 0 0 18px #b23b8e;
+    }
 
-  footer{
-    text-align:center;
-    padding: 40px 24px 60px;
-    font-size: 14px;
-    color:var(--text-soft);
-    font-weight:700;
-  }
+    /* COUNTDOWN */
+    .countdown h2 {
+      font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+      margin-bottom: 10px;
+      color: #ede4ff;
+    }
+    .countdown .eyebrow {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .clock {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .clock .unit {
+      background: rgba(12, 6, 20, 0.65);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(180, 122, 255, 0.3);
+      border-radius: 20px;
+      padding: 22px 20px;
+      min-width: 88px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 12px rgba(130, 70, 200, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+    .clock .unit.tick {
+      animation: tickPulse 0.4s ease;
+      border-color: #b47aff;
+      box-shadow: 0 0 30px #7f3f9e;
+    }
+    @keyframes tickPulse {
+      0% { transform: scale(1); }
+      30% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+    .clock .num {
+      font-family: 'Baloo 2', cursive;
+      font-size: 2.4rem;
+      color: #b47aff;
+      text-shadow: 0 0 20px #7f3f9e;
+      display: block;
+      line-height: 1;
+    }
+    .clock .label {
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #9f8abb;
+      font-weight: 700;
+      margin-top: 8px;
+      display: block;
+    }
+    .countdown .meet-note {
+      margin-top: 26px;
+      font-size: 0.98rem;
+      color: #cab8e6;
+      font-weight: 600;
+      text-shadow: 0 0 8px #2f1b4a;
+    }
 
-  @media (max-width: 560px){
-    section{ padding: 50px 18px; }
-    .card{ padding: 30px 20px; }
-    .tl-item{ grid-template-columns: 1fr; }
-  }
+    /* GALLERY */
+    .gallery h2 {
+      margin-bottom: 8px;
+      color: #ede4ff;
+    }
+    .gallery .hint {
+      font-size: 14px;
+      color: #9f8abb;
+      margin-bottom: 32px;
+      font-weight: 600;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 18px;
+    }
+    .polaroid {
+      background: rgba(20, 12, 30, 0.6);
+      backdrop-filter: blur(2px);
+      padding: 12px 12px 26px;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(180, 122, 255, 0.15);
+      transform: rotate(var(--r, -3deg));
+      transition: transform 0.25s ease, box-shadow 0.3s;
+      cursor: default;
+      border: 1px solid rgba(180, 122, 255, 0.1);
+    }
+    .polaroid:nth-child(2n) { --r: 3deg; }
+    .polaroid:nth-child(3n) { --r: -5deg; }
+    .polaroid:hover {
+      transform: rotate(0deg) scale(1.04);
+      box-shadow: 0 12px 40px rgba(90, 50, 180, 0.5), 0 0 0 1px #b47aff;
+    }
+    .polaroid .frame {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      overflow: hidden;
+      background: rgba(30, 18, 50, 0.5);
+    }
+    .polaroid .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+    .polaroid .cap {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      color: #cfc1e6;
+    }
+    .f1 { background: linear-gradient(135deg, #3a1b5e, #1f0d3a); }
+    .f2 { background: linear-gradient(135deg, #1d3b66, #0f2440); }
+    .f3 { background: linear-gradient(135deg, #4a2a6b, #241244); }
+    .f4 { background: linear-gradient(135deg, #2d1f4a, #180d2e); }
+    .f5 { background: linear-gradient(135deg, #4f1f5e, #2d0f3a); }
+    .f6 { background: linear-gradient(135deg, #1b2f5e, #0e1a3a); }
 
-  @media (prefers-reduced-motion: reduce){
-    *{ animation: none !important; transition: none !important; }
-    .reveal, .stagger-item, .hero h1 .word, .hero .sub{ opacity:1 !important; transform:none !important; }
-  }
-</style>
+    /* ASK BUTTONS */
+    .ask {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+    }
+    .ask h2 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: #f0eaff;
+      text-shadow: 0 0 18px #7f3f9e;
+    }
+    .btn-row {
+      position: relative;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      min-height: 140px;
+      width: 100%;
+    }
+    button {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 999px;
+      padding: 16px 34px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    #yesBtn {
+      background: #8f5eff;
+      color: #fff;
+      box-shadow: 0 0 30px #7f3f9e, 0 8px 28px rgba(100, 50, 200, 0.6);
+    }
+    #yesBtn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 50px #b47aff, 0 8px 32px #7f3f9e;
+    }
+    #yesBtn.bump {
+      animation: bump 0.4s ease;
+    }
+    @keyframes bump {
+      0% { transform: scale(1); }
+      40% { transform: scale(0.94); }
+      70% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+    #noBtn {
+      background: rgba(20, 12, 30, 0.5);
+      backdrop-filter: blur(4px);
+      color: #cab8e6;
+      border: 1px solid rgba(180, 122, 255, 0.3);
+      box-shadow: 0 0 12px rgba(80, 40, 150, 0.2);
+      position: relative;
+      transition: transform 0.18s ease, left 0.18s ease, top 0.18s ease;
+    }
+    #noBtn:hover {
+      border-color: #b47aff;
+    }
+    .result {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ff9ae6;
+      text-shadow: 0 0 24px #b23b8e;
+      min-height: 40px;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 24px 60px;
+      font-size: 13px;
+      color: #9f8abb;
+      font-weight: 600;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      .reveal, .stagger-item, .hero h1 .word, .hero .sub { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="stars-bg" id="starsBg"></div>
+<div class="glow-bg">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+<div class="particles-bg" id="particlesBg"></div>
+<div class="neon-line"></div>
+<div class="neon-line neon-line2"></div>
 
 <section class="hero">
-  <div class="eyebrow">✨ for Adeniran Boluwatife ✨</div>
+  <div class="eyebrow">for Adeniran Boluwatife</div>
   <h1>
-    <span class="word" style="animation-delay:.05s">From</span> <span class="word" style="animation-delay:.12s">a</span> <span class="word" style="animation-delay:.19s">TikTok</span> <span class="word" style="animation-delay:.26s">friend</span><br>
-    <span class="word" style="animation-delay:.36s">to</span> <span class="word" style="animation-delay:.43s">my</span> <span class="word" style="animation-delay:.5s"><em>favorite</em></span> <span class="word" style="animation-delay:.58s"><em>person</em> 🌙</span>
+    <span class="word" style="animation-delay:0.05s">From</span> <span class="word" style="animation-delay:0.12s">a</span> <span class="word" style="animation-delay:0.19s">TikTok</span> <span class="word" style="animation-delay:0.26s">friend</span><br>
+    <span class="word" style="animation-delay:0.36s">to</span> <span class="word" style="animation-delay:0.43s">my</span> <span class="word" style="animation-delay:0.5s"><em>favorite</em></span> <span class="word" style="animation-delay:0.58s"><em>person</em> 💜</span>
   </h1>
-  <p class="sub">Neither of us planned this. An app built for short videos somehow gave me the coolest person ever — you!</p>
+  <p class="sub">Neither of us planned this. An app built for 15-second videos somehow gave me Someone so important to me which is you.</p>
   <div class="scroll-hint">scroll down, it gets better ↓</div>
 </section>
 
 <section class="story reveal">
   <div class="eyebrow">how it started</div>
-  <h2>Not the plan, but the best thing that happened anyway 🖤</h2>
+  <h2>Not the plan, but the best thing that happened anyway 🌙</h2>
   <div class="timeline stagger">
     <div class="tl-item stagger-item">
       <div class="tl-tag">The Start</div>
       <div class="tl-body">
         <h3>We met on TikTok 📱</h3>
-        <p>No grand setup — just two people on the same app, and somehow the algorithm actually did something right for once!</p>
+        <p>No grand setup just two people on the same app, and somehow the algorithm did something right for once.</p>
       </div>
     </div>
     <div class="tl-item stagger-item">
       <div class="tl-tag">Since Then</div>
       <div class="tl-body">
-        <h3>You became my favorite notification 💬</h3>
-        <p>Messages turned into long conversations, and suddenly you became the exact person I want to tell everything to first.</p>
+        <h3>You became my best part 💜</h3>
+        <p>Messages turned into conversations, conversations turned into you being the person I want to tell things to first.</p>
       </div>
     </div>
     <div class="tl-item stagger-item">
       <div class="tl-tag">What's Next</div>
       <div class="tl-body">
-        <h3>Meeting in person — August 14th ✨</h3>
-        <p>After all the screens, we finally get to hang out in real life. I honestly cannot wait!</p>
+        <h3>Meeting in person  August 14th ✨</h3>
+        <p>After everything typed across a screen, we finally get to do this in real life. I honestly can't wait.</p>
       </div>
     </div>
   </div>
@@ -451,93 +591,90 @@
 
 <section class="message reveal">
   <div class="card">
-    <h2>Hi Tife 👋🖤</h2>
+    <h2>Hi Tife 👋💜</h2>
     <p>
-      I don't know exactly when it happened, but somewhere between your smile, the way you listen to me, give me attention, keep me checked, and especially how sensible you are — you became my favorite person to think about.
+      I don't know exactly when it happened, but somewhere between your smile and the way you you listen to my problems,giving me attentions keeping me checked and most espesially the way you think infact you are someone so sensible and somehow you became my favorite person to think about.
     </p>
     <p>
-      This isn't a big grand gesture, just a cool little website to say what I feel: I really, really like you, and I wanted you to know it in a way you'd remember and smile about. 🌙 <em>(Note: Yes, I typed all these words myself!)</em>
+      This isn't a big grand gesture just a small, slightly nerdy website to say what I feel: I really, really like you, and I wanted you to know it in a way you'd remember and smile about. 🌸 Note na me type all this word.
     </p>
-    <p style="font-size: 1.2rem; color: var(--crimson); font-weight: 700;">
-      So here it is: <strong>I love you, Boluwatife.</strong> I really want us to be together and explore the world side by side.
+    <p>
+      So here it is, in plain text and pixels: <strong>I love you, Boluwatife.</strong> And i really want us to be together and explore the world together.
     </p>
-    <div class="signoff" style="font-size: 1.2rem; font-family: 'Quicksand', sans-serif; color: var(--text-soft); margin-top: 20px;">
-      Know that this is not me putting pressure on you — take all the time you need to think about it! 🥀
-    </div>
-    <div class="signoff">made with love, just for you 🖤</div>
+    <div class="signoff"> know that this is not me putting pressure on you Take your time to think about it.</div>
+    <div class="signoff"> made with love, just for you 🧸</div>
   </div>
 </section>
 
 <section class="countdown reveal">
   <div class="eyebrow">the countdown</div>
-  <h2>Counting down until August 14th ⏳✨</h2>
+  <h2>Until I get to see you — August 14th ⏳</h2>
   <div class="clock" id="clock">
     <div class="unit"><span class="num" id="days">--</span><span class="label">Days</span></div>
     <div class="unit"><span class="num" id="hours">--</span><span class="label">Hours</span></div>
     <div class="unit"><span class="num" id="mins">--</span><span class="label">Minutes</span></div>
     <div class="unit"><span class="num" id="secs">--</span><span class="label">Seconds</span></div>
   </div>
-  <p class="meet-note">Every second on that clock is one less step between typing to you and actually being next to you. 🖤</p>
+  <p class="meet-note">Every second on that clock is one less between typing to you and actually being next to you. 💜</p>
 </section>
 
 <section class="gallery">
-  <h2 class="reveal">A Little Gallery 🖼️</h2>
-  <div class="hint reveal">(our cool memories &amp; photos go here!)</div>
+  <h2 class="reveal">a little gallery 🖼️</h2>
+  <div class="hint reveal">(add your own favorite photos of us here later!)</div>
   <div class="gallery-grid stagger">
-    <div class="polaroid stagger-item"><div class="frame f1"><img src="images/ourfirstchat.jpg" alt="First message" onerror="this.parentNode.innerHTML='💬'"></div><span class="cap">first message 💬</span></div>
-    <div class="polaroid stagger-item"><div class="frame f2"><img src="images/yourcutesleep.jpg" alt="Late night calls" onerror="this.parentNode.innerHTML='🌙'"></div><span class="cap">late night calls 🌙</span></div>
-    <div class="polaroid stagger-item"><div class="frame f3"><img src="images/yourcutesmile.jpg" alt="Your laugh" onerror="this.parentNode.innerHTML='🤭'"></div><span class="cap">your laugh 🤭</span></div>
-    <div class="polaroid stagger-item"><div class="frame f4">🎧</div><span class="cap">counting down ⏱️</span></div>
-    <div class="polaroid stagger-item"><div class="frame f5">💌</div><span class="cap">Aug 14th 🗓️</span></div>
-    <div class="polaroid stagger-item"><div class="frame f6">✨</div><span class="cap">us, in person ✨</span></div>
+    <div class="polaroid stagger-item"><div class="frame f1"><img src="images/ourfirstchat.jpg" alt="First message"></div><span class="cap">first message</span></div>
+    <div class="polaroid stagger-item"><div class="frame f2"><img src="images/yourcutesleep.jpg" alt="Late night calls"></div><span class="cap">late night calls</span></div>
+    <div class="polaroid stagger-item"><div class="frame f3"><img src="images/yourcutesmile.jpg" alt="Your laugh"></div><span class="cap">your laugh</span></div>
+    <div class="polaroid stagger-item"><div class="frame f4">🎶</div><span class="cap">counting down</span></div>
+    <div class="polaroid stagger-item"><div class="frame f5">💌</div><span class="cap">Aug 14</span></div>
+    <div class="polaroid stagger-item"><div class="frame f6">✨</div><span class="cap">us, in person</span></div>
   </div>
 </section>
 
 <section class="ask reveal">
-  <h2>So... will you be mine? 🥺🖤</h2>
+  <h2>so... will you be mine? 🥺</h2>
   <div class="btn-row" id="btnRow">
-    <button id="yesBtn" onclick="sayYes()">Yes 🖤</button>
-    <button id="noBtn" onmouseover="dodge()" onclick="dodge()">No 😜</button>
+    <button id="yesBtn" onclick="sayYes()">Yes 💜</button>
+    <button id="noBtn" onmouseover="dodge()" onclick="dodge()">No</button>
   </div>
   <div class="result" id="result"></div>
 </section>
 
 <footer>
-  made just for Boluwatife, with a whole lot of love 🌙🖤
+  made just for Boluwatife, with a whole lot of love 💜
 </footer>
 
 <script>
-  // Floating stars & dark emojis background
-  const starsBg = document.getElementById('starsBg');
-  const starEmojis = ['✨','🌙','🖤','⭐','💫'];
-  for(let i=0;i<22;i++){
-    const s = document.createElement('div');
-    s.className = 'star';
-    s.textContent = starEmojis[Math.floor(Math.random()*starEmojis.length)];
-    s.style.left = Math.random()*100 + '%';
-    s.style.animationDuration = (8 + Math.random()*10) + 's';
-    s.style.animationDelay = (Math.random()*10) + 's';
-    s.style.fontSize = (16 + Math.random()*20) + 'px';
-    starsBg.appendChild(s);
+  // floating particles (dark gradient neon)
+  const particlesBg = document.getElementById('particlesBg');
+  for (let i = 0; i < 35; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (14 + Math.random() * 18) + 's';
+    p.style.animationDelay = (Math.random() * 12) + 's';
+    p.style.width = (4 + Math.random() * 6) + 'px';
+    p.style.height = p.style.width;
+    particlesBg.appendChild(p);
   }
 
-  // Countdown to August 14, 2026
   const target = new Date('2026-08-14T00:00:00');
   let lastSecs = null;
-  function updateClock(){
+
+  function updateClock() {
     const now = new Date();
     let diff = target - now;
-    if(diff < 0) diff = 0;
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff / (1000*60*60)) % 24);
-    const mins = Math.floor((diff / (1000*60)) % 60);
+    if (diff < 0) diff = 0;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
     const secs = Math.floor((diff / 1000) % 60);
     document.getElementById('days').textContent = days;
-    document.getElementById('hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('mins').textContent = String(mins).padStart(2,'0');
-    document.getElementById('secs').textContent = String(secs).padStart(2,'0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('mins').textContent = String(mins).padStart(2, '0');
+    document.getElementById('secs').textContent = String(secs).padStart(2, '0');
 
-    if(secs !== lastSecs){
+    if (secs !== lastSecs) {
       lastSecs = secs;
       const secUnit = document.getElementById('secs').closest('.unit');
       secUnit.classList.remove('tick');
@@ -548,13 +685,13 @@
   updateClock();
   setInterval(updateClock, 1000);
 
-  // Dodging "No" button
   const noBtn = document.getElementById('noBtn');
   const btnRow = document.getElementById('btnRow');
-  function dodge(){
+
+  function dodge() {
     const rowRect = btnRow.getBoundingClientRect();
-    const maxX = Math.max(rowRect.width - 100, 50);
-    const maxY = Math.max(rowRect.height - 50, 30);
+    const maxX = Math.max(rowRect.width - 100, 40);
+    const maxY = Math.max(rowRect.height - 50, 20);
     const x = (Math.random() - 0.5) * maxX;
     const y = (Math.random() - 0.5) * maxY;
     noBtn.style.position = 'relative';
@@ -562,29 +699,47 @@
     noBtn.style.top = y + 'px';
   }
 
-  // CELEBRATE YES
-  function sayYes(){
-    document.getElementById('result').textContent = "Yay!! 🎉🖤 Best decision you've made all week!";
-    confetti({
-      particleCount: 120,
-      spread: 80,
-      origin: { y: 0.6 },
-      colors: ['#E63956', '#FFD166', '#4D1826', '#F3E9F4']
-    });
+  function sayYes() {
+    document.getElementById('result').textContent = "yay!! 🎉💜 best decision you've made all week.";
+    const btn = document.getElementById('yesBtn');
+    btn.classList.remove('bump');
+    void btn.offsetWidth;
+    btn.classList.add('bump');
+    confettiBurst();
   }
 
-  // Scroll-triggered reveal animations
+  function confettiBurst() {
+    const emojis = ['💜', '🎉', '✨', '💕', '🌈', '🌟'];
+    for (let i = 0; i < 40; i++) {
+      const c = document.createElement('div');
+      c.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      c.style.position = 'fixed';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.top = '-20px';
+      c.style.fontSize = (16 + Math.random() * 22) + 'px';
+      c.style.zIndex = 999;
+      c.style.pointerEvents = 'none';
+      c.style.transition = 'transform 2.5s ease-in, opacity 2.5s ease-in';
+      document.body.appendChild(c);
+      requestAnimationFrame(() => {
+        c.style.transform = `translateY(${100 + Math.random() * 25}vh) rotate(${Math.random() * 400}deg)`;
+        c.style.opacity = '0';
+      });
+      setTimeout(() => c.remove(), 2600);
+    }
+  }
+
   const revealEls = document.querySelectorAll('.reveal, .stagger');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
         io.unobserve(entry.target);
       }
     });
   }, { threshold: 0.15 });
-  revealEls.forEach(el=> io.observe(el));
+  revealEls.forEach(el => io.observe(el));
 </script>
-
 </body>
 </html>
+```
